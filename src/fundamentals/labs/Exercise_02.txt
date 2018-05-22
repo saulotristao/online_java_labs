@@ -1,6 +1,7 @@
-1) Complete git tutorial here: https://try.github.io/
+ password
+ 1) Complete git tutorial here: https://try.github.io/ -- DONE
 
-2) Create Github account if you have not already done so.
+2) Create Github account if you have not already done so. -- Done
 
 3) Once complete practice the following on your own machine:
 

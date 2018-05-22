@@ -1,37 +1,37 @@
 Answer the following questions:
 
 1.) Using the command line, how do you:
-    a. change directories?
-    b. list the contents of a folder?
-    c. print the path of the current directory?
-    d. move a file from one location to the another?
-    e. copy a file from one location to another?
-    f. create a file?
-    g. create a folder?
-    h. delete a file?
-    i. delete a folder?
-    j. print the contents of a file?
-    k. edit the contents of a file?
+    a. change directories? cd
+    b. list the contents of a folder? ls - al
+    c. print the path of the current directory? pwd
+    d. move a file from one location to the another? mv
+    e. copy a file from one location to another? cp
+    f. create a file? touch
+    g. create a folder? mkdir
+    h. delete a file? rm
+    i. delete a folder? rm -R
+    j. print the contents of a file? cat
+    k. edit the contents of a file? vim  --- i insert --- :wq
 
-2.) Why do we use git and Github?
+2.) Why do we use git and Github? To storage and control our project
 
-3.) What is the general flow of git?
+3.) What is the general flow of git? You have a master branch, copy to your computer, code, commit and push
 
-4.) What is the purpose of adding a remote to a local git repository?
+4.) What is the purpose of adding a remote to a local git repository? ??? you are saving at git but not overwritting the master
 
-5.) How do you print a message to the console?
+5.) How do you print a message to the console? System.out.println
 
-6.) Where does a program begin its execution?
+6.) Where does a program begin its execution? on the main method -- public static void
 
-7.) What is a code block and how do you create one?
+7.) What is a code block and how do you create one? A code block is a grouping of two or more statements. How using /* ... */
 
-8.) What is the idea of variable scope?
+8.) What is the idea of variable scope? Variable scope is the idea that variables are only visible within a block of code.
 
-9.) What are semicolons used for?
+9.) What are semicolons used for? the semicolon is the separator used to terminate a statement.
 
-10.) What are lines of code indented? When should a line be indented?
+10.) What are lines of code indented? When should a line be indented? Using this style you indent one level (one "tab") after each opening brace.
 
-11.) What does a .java file need to be complied to a .class file before running?
+11.) What does a .java file need to be complied to a .class file before running? class is the byte code tha --- how the machine reads what we wrote in .java
 
 
 

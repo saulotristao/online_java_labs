@@ -1,22 +1,50 @@
-Fundamentals Exercise 1: CLI
+cd Fundamentals Exercise 1: CLI
      Perform the following tasks using the CLI and copy and paste the commands and results below
 
-     1. Navigate to CodingNomads folder (or the space you have create for this project)
-     2. Create new folder Terminal_testing
+     1. Navigate to CodingNomads folder (or the space you have create for this project) - Saulos-MacBook-Pro:Terminal_testing saulot$ cd /Users/saulot/Desktop/CodingNomads/
+
+     2. Create new folder Terminal_testing  Saulos-MacBook-Pro:CodingNomads saulot$ mkdir Terminal_testing
+
      3. Inside of folder Terminal_testing,
          a. create 3 new .txt files all with different names
+             Saulos-MacBook-Pro:Terminal_testing saulot$ touch a.txt
+             Saulos-MacBook-Pro:Terminal_testing saulot$ touch b.txt
+             Saulos-MacBook-Pro:Terminal_testing saulot$ touch c.txt
          b. print the directory path
+            Saulos-MacBook-Pro:Terminal_testing saulot$ pwd
+            /Users/saulot/CodingNomads/Terminal_testing
          c. list the contents of the folder
+         Saulos-MacBook-Pro:Terminal_testing saulot$ ls -al
+         total 0
+         drwxr-xr-x  5 saulot  staff  160 May 18 08:42 .
+         drwxr-xr-x  4 saulot  staff  128 May 18 08:40 ..
+         -rw-r--r--  1 saulot  staff    0 May 18 08:42 a.txt
+         -rw-r--r--  1 saulot  staff    0 May 18 08:42 b.txt
+         -rw-r--r--  1 saulot  staff    0 May 18 08:42 c.txt
+
      5. Inside of folder Terminal_testing, create a new folder
+        Saulos-MacBook-Pro:Terminal_testing saulot$ mkdir Testing_2
+
      6. Copy a file from Terminal_testing to the new folder
+        Saulos-MacBook-Pro:Terminal_testing saulot$ cp a.txt /Users/saulot/Desktop/CodingNomads/Terminal_testing/Testing_2/
+
      7. Move a different file from Terminal testing to the new folder
+        Saulos-MacBook-Pro:Terminal_testing saulot$ mv b.txt /Users/saulot/Desktop/CodingNomads/Terminal_testing/Testing_2/
+
      8. Demonstrate removing:
          a. A file
+            Saulos-MacBook-Pro:CodingNomads saulot$ rm a.txt
          b. A folder
+            Saulos-MacBook-Pro:CodingNomads saulot$ rm -R Testing_2
+
      9. CHALLENGE:
          a. Use $ vim to write some text inside a file
          b. Use $ cat print contents of file
          c. Use $ grep to search for a word inside file
+
+         Saulos-MacBook-Pro:CodingNomads saulot$ cat b.txt
+         Saulos-MacBook-Pro:CodingNomads saulot$ vim b.txt
+         Saulos-MacBook-Pro:CodingNomads saulot$ grep "filename" b.txt
 
 Example Output (pwd):
     1. Cadens-MacBook-Pro:CodingNomads cadenmackenzie$ pwd

@@ -7,6 +7,8 @@ class Example1 {
         System.out.println("Hello World! Hello World!!");
         int next = 10;
         int y = 7;
-        System.out.println(next + y);
+
+        double t = next % y;
+        System.out.println(t);
     }
 }
