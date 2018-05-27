@@ -16,7 +16,16 @@ public class Exercise_01 {
 
     public static void main(String[] args) {
 
-        // write code here
+        int a = 1;
+        double b = 1.2;
+        float c = 1456789;
+        char test = 'e';
+
+        System.out.println("this is the interget" + a);
+        System.out.println("this is the double " + b);
+        System.out.println("this is the float " + c);
+        System.out.println("this is the char " + test);
+
 
     }
 }

@@ -62,8 +62,10 @@ Answer the following questions:
     yes
 
 13.) How do you concatenate Strings?
+    System.out.println("String one " + "String two"); // concatenating two strings and printing them to the console
 
 14.) Can you cast and int to a String or a String to an int? Why or why not?
+    you can not because a String is a object and a int is a primitive
 
 15.) What is an array?
 

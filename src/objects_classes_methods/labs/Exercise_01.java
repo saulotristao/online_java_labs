@@ -16,4 +16,69 @@ package objects_classes_methods.labs;
  *      Cars, animals, poker games, sports teams, trees, beers, people and so on.
  */
 
+class HorseRider {
 
+    public static void main(String[] args) {
+        Horse totsie = new Horse(10, "Thoroughbred", 6.1 );
+        Rider saulo = new Rider(30,  174.0,  5.9);
+
+        System.out.println(saulo.age);
+
+        System.out.println(totsie.getHeight());
+
+        saulo.age = 31;
+        totsie.setHeight(6.3);
+
+        System.out.println(saulo.age);
+        System.out.println(totsie.getHeight());
+    }
+
+}
+
+class Horse{
+    private int age;
+    private String breed;
+    private double height ;
+
+    public Horse (int age, String breed,double height){
+        this.age = age;
+        this.breed = breed;
+        this.height = height;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setBreed(String breed) {
+        this.breed = breed;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getBreed() {
+        return breed;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+}
+
+class Rider {
+    int age;
+    double weight;
+    double height;
+
+    public Rider (int age, double weight,double height) {
+        this.age = age;
+        this.weight = weight;
+        this.height = height;
+    }
+}
