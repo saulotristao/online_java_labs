@@ -11,26 +11,123 @@ package objects_classes_methods.labs;
  *      3) The main method should then  call one or more non-static methods in class2 and class3.
  *
  */
+class Controller{
+    public static void main(String[] args) {
+        Minivan ford = new Minivan ("ford");
+        Minivan nissan = new Minivan("nissan");
+        SportCar ferrari = new SportCar("Ferrari");
 
-class Cartotravel extends Car{
+        System.out.println();
+        Passenger[] passengers;
+        passengers = new Passenger[ford.getPassengers()];
 
-    private Passenger alpha;
+        ford.setHasDoubleSliders(true);
 
-    public Cartotravel(int passengers, String brand, double timetoleave, Passenger alpha) {
-        super(passengers, brand, timetoleave);
-        this.alpha = alpha;
+        for (int a = 0; a < ford.getPassengers(); a++){
+            Passenger name1 = new Passenger(a,1.1, 4.3);
+            passengers[a] = name1;
+        }
+
+        ford.setPassengerArray(passengers);
+        System.out.println(ford.toString());
+
+        for(Passenger p : passengers){
+            p.setAge(p.getAge()+1);
+        }
+        System.out.println(ford.toString());
+
+        nissan.setPassengers(9);
+        nissan.setHasDoubleSliders(false);
+        passengers = new Passenger[nissan.getPassengers()];
+
+        for (int a = 0; a < nissan.getPassengers(); a++){
+            Passenger name1 = new Passenger(a,2.2, 4.3);
+            passengers[a] = name1;
+        }
+
+        nissan.setPassengerArray(passengers);
+
+        ferrari.setPassengers(5);
+        ferrari.setAerofolio(true);
+
+
+        passengers = new Passenger[ferrari.getPassengers()];
+        for (int a = 0; a < ferrari.getPassengers(); a++){
+            Passenger name1 = new Passenger(a,3.3, 4.3);
+            passengers[a] = name1;
+
+        }
+
+        ferrari.setPassengerArray(passengers);
+
+        System.out.println(nissan.toString());
+        System.out.println(ferrari.toString());
+
+    }
+}
+
+
+class Minivan extends Car{
+
+    private int defaultPassenger = 7;
+    private boolean hasDoubleSliders;
+
+    public Minivan( String brand) {
+        super(brand);
+        super.setPassengers(defaultPassenger);
     }
 
-    public static void main(String[] args) {
-        Passenger lucas = new Passenger(28,5.8, 176);
-        Cartotravel beta = new Cartotravel(4, "ford", 12.5, lucas);
-        System.out.println(lucas.getAge());
-        System.out.println(beta.getBrand());
-        beta.setBrand("nissan");
-        lucas.setAge(30);
-        System.out.println(lucas.getAge());
-        System.out.println(beta.getBrand());
+    public boolean isHasDoubleSliders() {
+        return hasDoubleSliders;
+    }
 
+    public void setHasDoubleSliders(boolean hasDoubleSliders) {
+        this.hasDoubleSliders = hasDoubleSliders;
+    }
+
+    @Override
+    public String toString() {
+        String str = "Minivan{" +
+                "numpassenger=" + getPassengers() +
+                ", hasDoubleSliders=" + hasDoubleSliders +
+                ", brand " + getBrand() + ", ";
+        for (Passenger p : getPassengerArray()){
+            str = str + p.toString();
+        }
+        str = str + "}";
+        return str;
+    }
+}
+
+class SportCar extends Car{
+
+    private int defaultPassenger = 2;
+    private  boolean aerofolio;
+
+    public SportCar(String brand) {
+        super(brand);
+        super.setPassengers(defaultPassenger);
+    }
+
+    public boolean isAerofolio() {
+        return aerofolio;
+    }
+
+    public void setAerofolio(boolean aerofolio) {
+        this.aerofolio = aerofolio;
+    }
+
+    @Override
+    public String toString() {
+        String str = "SportCar{" +
+                "numpassenger=" + getPassengers() +
+                ", aerofolio=" + aerofolio +
+                ", brand" + getBrand();
+        for (Passenger p : getPassengerArray()){
+            str = str + p.toString();
+        }
+        str = str + "}";
+        return str;
     }
 }
 
@@ -68,17 +165,37 @@ class Passenger{
     public double getWeight() {
         return weight;
     }
+
+    @Override
+    public String toString() {
+        return "Passenger{" +
+                "age=" + age +
+                ", height=" + height +
+                ", weight=" + weight +
+                '}';
+    }
 }
 
 class Car{
     private int passengers;
+    private Passenger[] passengerArray;
     private String brand;
     private double timetoleave;
 
-    public Car( int passengers, String brand, double timetoleave){
-        this.passengers = passengers;
+    public Car( String brand ){
         this.brand = brand;
-        this.timetoleave = timetoleave;
+    }
+
+    public Passenger[] getPassengerArray() {
+        return passengerArray;
+    }
+
+    public void setPassengerArray(Passenger[] passengerArray) {
+        this.passengerArray = passengerArray;
+    }
+
+    public int getPassengers() {
+        return passengers;
     }
 
     public void setPassengers(int passengers) {
@@ -93,9 +210,6 @@ class Car{
         this.timetoleave = timetoleave;
     }
 
-    public int getPassengers() {
-        return passengers;
-    }
 
     public String getBrand() {
         return brand;
